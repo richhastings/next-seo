@@ -20,7 +20,6 @@ const MovieJsonLd: FC<MovieJsonLdProps> = ({
   director,
   ratingValue,
   reviewCount,
-  reviews,
 }) => {
   const jslonld = `{
     "@context": "http://schema.org",
@@ -38,24 +37,7 @@ const MovieJsonLd: FC<MovieJsonLdProps> = ({
     "director": {
       "@type": "Person",
       "name": "${director}"
-    },
-    "review": [
-      ${reviews.map(
-        review => `{
-        "@type": "Review",
-        "author": "${review.author}",
-        "datePublished": "${review.datePublished}",
-        "description": "${review.description}",
-        "name": "${review.description}",
-        "reviewRating": {
-          "@type": "Rating",
-          "bestRating": "${review.bestRating}",
-          "ratingValue": "${review.ratingValue}",
-          "worstRating": "${review.worstRating}"
-        }
-      }`,
-      )}
-    ]
+    }
   }`;
 
   return (
