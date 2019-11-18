@@ -1,6 +1,7 @@
 export { default as DefaultSeo } from './meta/defaultSEO';
 export { default as NextSeo } from './meta/nextSEO';
 export { default as ArticleJsonLd, ArticleJsonLdProps } from './jsonld/article';
+export { default as MovieJsonLd, MovieJsonLdProps } from './jsonld/movie';
 export {
   default as BreadcrumbJsonLd,
   BreadCrumbJsonLdProps,
